@@ -18,7 +18,7 @@ function App() {
         console.log('componentDidMount');
     }, []);
 
-    //Com dependência - executa toda vez que a dependência mud
+    //Com dependência - executa toda vez que a dependência mudar, toda vez que counter mudar ele vai ser chamado
     useEffect(() => {
         console.log('contador mudou para: ' + counter);
     }, [counter]);
@@ -30,7 +30,7 @@ function App() {
         return () => {
             document.querySelector('h1')?.removeEventListener('click', eventFn);
         };
-    });
+    }, []);
     return (
         <div className="App">
             <h1>Contador: {counter}</h1>

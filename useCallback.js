@@ -19,7 +19,7 @@ function App() {
     const [counter, setCounter] = useState(0);
 
     const incrementCounter = useCallback((num) => {
-        setCounter((c) => c + num);
+        setCounter((c) => c + num); // c recebe o counter
     }, []);
     console.log('elemento pai');
     return (
